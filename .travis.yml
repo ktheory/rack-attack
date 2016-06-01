@@ -16,3 +16,7 @@ gemfile:
 services:
   - redis
   - memcached
+
+# Skip development gems (guard, pry)
+# The 'listen' dependency breaks on ruby <2.2
+bundler_args: --without development
